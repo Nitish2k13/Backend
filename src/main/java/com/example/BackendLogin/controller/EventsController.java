@@ -17,7 +17,6 @@ public class EventsController {
 
     @PostMapping
     public Events createEvent(@RequestBody Events event) {
-        System.out.println("Received Event: " + event);
         return eventsService.saveEvent(event);
     }
 
