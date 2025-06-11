@@ -41,7 +41,8 @@ public class UserService {
             return false;  // no user with that email
         }
         // If multiple, we check if *any* match the password
-        return users.stream().anyMatch(user -> user.getEmail().equals(email));
+        return users.stream()
+                .anyMatch(user -> user.getPassword().equals(password));
     }
 
 }
